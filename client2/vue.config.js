@@ -1,5 +1,5 @@
 module.exports = {
     devServer: {
-      proxy: 'https://dino-back.herokuapp.com/'
+      proxy: 'http://localhost:3001/'
     }
   }

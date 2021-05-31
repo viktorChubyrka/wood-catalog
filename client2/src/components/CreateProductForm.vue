@@ -54,7 +54,7 @@ export default {
                 formData.append('title',this.title);
                 formData.append('category',this.category);
                 formData.append("description",this.description);
-                let res = await axios.post('http://localhost:3000/api/products/create',formData);
+                let res = await axios.post('/api/products/create',formData);
                 if(res.data.data.status == 200){
                     this.$emit('created')
                 }else{
@@ -73,7 +73,7 @@ export default {
                 formData.append('title',this.title);
                 formData.append('category',this.category);
                 formData.append("description",this.description);
-                let res = await axios.post('http://localhost:3000/api/products/update',formData);
+                let res = await axios.post('/api/products/update',formData);
                 if(res.data.data.status == 200){
                     this.$emit('updated')
                 }else{

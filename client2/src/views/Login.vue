@@ -40,7 +40,7 @@ export default {
                     password:this.password,
                     nickname:this.nickname
                 }
-                let res = await axios.post('https://dino-back.herokuapp.com/api/autorization/registration',user);
+                let res = await axios.post('/api/autorization/registration',user);
                 if(res.data.data.status == 200){
                     this.$store.commit('setUser',res.data.data.user);
                     localStorage.setItem('user',JSON.stringify(res.data.data.user));
@@ -58,7 +58,7 @@ export default {
                     password:this.password,
                     nickname:this.nickname
                 }
-                let res = await axios.post('https://dino-back.herokuapp.com/api/autorization/login',user);
+                let res = await axios.post('/api/autorization/login',user);
                 if(res.data.data.status == 200){
                     this.$store.commit('setUser',res.data.data.user);
                     localStorage.setItem('user',JSON.stringify(res.data.data.user));

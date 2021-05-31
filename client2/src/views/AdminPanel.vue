@@ -71,14 +71,14 @@ export default {
     },
     methods:{
         async getAllProduct(){
-            let product = await axios.get('http://localhost:3000/api/products/all_products');
+            let product = await axios.get('/api/products/all_products');
             this.product = product.data.reverse();
         },
         goToproduct(productId){
             this.$router.push(`/product${productId}`)
         },
         async deleteProduct(id){
-             await axios.post('http://localhost:3000/api/products/delete',{id});
+             await axios.post('/api/products/delete',{id});
              this.getAllProduct();
         }
        

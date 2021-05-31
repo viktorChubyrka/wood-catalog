@@ -55,7 +55,7 @@ export default {
     },
     methods:{
         async getAllProduct(){
-            let product = await axios.get('http://localhost:3000/api/products/all_products');
+            let product = await axios.get('/api/products/all_products');
             this.product = product.data.reverse();
         },
         goToproduct(productId){

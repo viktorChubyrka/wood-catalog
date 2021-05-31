@@ -54,15 +54,15 @@ export default {
     },
     methods:{
          async getproduct(){
-            let product = await axios.get('http://localhost:3000/api/products/product'+this.$route.params.id);
+            let product = await axios.get('/api/products/product'+this.$route.params.id);
             this.product = product.data;
         },
         async commentproduct(){
-            await axios.product('http://localhost:3000/api/products/comment', {id:this.$route.params.id,nickname:this.user.nickname,comment:this.comment});
+            await axios.product('/api/products/comment', {id:this.$route.params.id,nickname:this.user.nickname,comment:this.comment});
             this.getproduct();
         },
         async deleteComment(date){
-            await axios.product('http://localhost:3000/api/products/delete_comment', {date,id:this.$route.params.id});
+            await axios.product('/api/products/delete_comment', {date,id:this.$route.params.id});
             this.getproduct();
         },
         async updateproduct(){
