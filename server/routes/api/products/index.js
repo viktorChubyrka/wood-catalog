@@ -19,7 +19,7 @@ var upload = multer({ storage: storage });
 var type = upload.single("file");
 
 router.post("/create", type, async function (req, res) {
-  let path = "http://localhost:3000/" + req.file.filename;
+  let path = "http://localhost:3000/photo/" + req.file.filename;
   let newproduct = await productsController.createproduct(req.body,path);
   res.send(newproduct);
 });
@@ -27,7 +27,7 @@ router.post("/create", type, async function (req, res) {
 router.post("/update", type, async function (req, res) {
   let path = '';
   if(req.file){
-    path = "http://localhost:3000/" + req.file.filename;
+    path = "http://localhost:3000/photo/" + req.file.filename;
   }
   let updatetproduct = await productsController.updateproduct(req.body,path);
   res.send(updatetproduct);
