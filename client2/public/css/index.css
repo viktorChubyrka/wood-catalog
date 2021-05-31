@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+h1{
+    font-size: 5vh;
+}
+h2{
+    font-size: 4.5vh;
+}
+h3{
+    font-size: 3vh;
+}
+h4{
+    font-size: 2.5vh;
+}
+h5{
+    font-size: 2vh;
+}
+.strong{
+    font-weight: bold;
+}
+h1,h2,h3,h4,h5{
+    text-align: left;
+}
+.mb-10{
+    margin-bottom: 1.111vh;
+}
+.mb-20{
+    margin-bottom: 2.222vh;
+}
+.container{
+    position: absolute;
+    left:0;
+    right:0;
+    width:100vw;
+    height:100vh;
+    box-sizing: border-box;
+    padding:10vh 10vh 5vh;
+    background: rgb(230, 227, 227);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+.container::-webkit-scrollbar{
+    width:0;
+    height:0
+}
+.t-center{
+    text-align: center;
+}
+.dino-input{
+    border:none;
+    border-radius: 50%;
+    width:40%;
+    height:4vh;
+    font-size:2.222vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.catalogue-btn{
+    border:none;
+    border-radius: 2vh;
+    font-size:2.222vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif!important;
+    cursor: pointer;
+    background-color: rgb(1, 1, 80);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+    padding: 1.3vh;
+}
+.dino-btn:hover{
+    background-color:white ;
+    color: forestgreen;
+}
+.dino-input:focus{
+    outline: none;
+}
